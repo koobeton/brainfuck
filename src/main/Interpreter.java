@@ -7,16 +7,16 @@ import java.io.IOException;
 public class Interpreter {
 
     private String source;
+    private Tape tape;
 
     public Interpreter(String source) {
         this.source = source;
+        tape = new Tape();
     }
 
     public static void main(String... args) throws Exception {
 
         Interpreter interpreter = new Interpreter(handleArgs(args));
-
-        System.out.println(interpreter.source);
     }
 
     private static String handleArgs(String... args) throws IOException {

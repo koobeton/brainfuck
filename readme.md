@@ -5,6 +5,9 @@ Brainfuck is an esoteric programming language noted for its extreme minimalism.
 #### Learn more about Brainfuck:
 [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck "Brainfuck")
 
+#### Realisation
+Unlike the classical representation of Brainfuck language in which the machine is limited to 30,000 cells, this implementation includes the machine with tape, dynamically extensible in both directions.
+
 #### Commands
 The eight language commands, each consisting of a single character:
 
