@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-class Tape {
+public class Tape {
 
     private static final byte NEW_CELL = 0;
 
@@ -16,13 +16,13 @@ class Tape {
         tape.add(NEW_CELL);
     }
 
-    void next() {
+    public void next() {
         if (++pointer > tape.size() - 1) {
             tape.add(NEW_CELL);
         }
     }
 
-    void previous() {
+    public void previous() {
         if (pointer <= 0) {
             tape.add(0, NEW_CELL);
         } else {
@@ -30,20 +30,24 @@ class Tape {
         }
     }
 
-    void increase() {
+    public void increase() {
         tape.set(pointer, (byte)(tape.get(pointer) + 1));
     }
 
-    void decrease() {
+    public void decrease() {
         tape.set(pointer, (byte)(tape.get(pointer) - 1));
     }
 
-    void out() {
+    public void out() {
         System.out.print(Character.valueOf((char)Byte.toUnsignedInt(tape.get(pointer))));
     }
 
-    void in() throws IOException {
+    public void in() throws IOException {
         tape.set(pointer, (byte)System.in.read());
         System.in.skip(System.in.available());
+    }
+
+    public boolean isNotZero() {
+        return tape.get(pointer) != 0;
     }
 }

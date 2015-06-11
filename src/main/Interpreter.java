@@ -1,13 +1,17 @@
 package main;
 
+import main.commands.Command;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.List;
 
 public class Interpreter {
 
     private String source;
     private Tape tape;
+    private List<Command> expression;
 
     public Interpreter(String source) {
         this.source = source;
@@ -17,6 +21,8 @@ public class Interpreter {
     public static void main(String... args) throws Exception {
 
         Interpreter interpreter = new Interpreter(handleArgs(args));
+
+
     }
 
     private static String handleArgs(String... args) throws IOException {
