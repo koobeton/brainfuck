@@ -4,11 +4,27 @@ import main.commands.Command;
 import main.commands.CommandFactory;
 import main.commands.LoopCommand;
 
+/**
+ * Represents a parser of the Brainfuck source code.
+ *
+ * @see Expression
+ * @see Command
+ * */
 public class Parser {
 
     private static String source;
     private static int charPointer;
 
+    /**
+     * Parses an {@code Expression} from the specified source.
+     *
+     * @param rawSource Brainfuck source code.
+     *
+     * @return an {@code Expression} of the Brainfuck {@code Command}s.
+     *
+     * @see Expression
+     * @see Command
+     * */
     public static Expression parse(String rawSource) {
 
         Expression expression = new Expression();
