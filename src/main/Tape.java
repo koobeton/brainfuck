@@ -24,6 +24,7 @@ public class Tape {
 
     public void previous() {
         if (pointer <= 0) {
+            pointer = 0;
             tape.add(0, NEW_CELL);
         } else {
             --pointer;
