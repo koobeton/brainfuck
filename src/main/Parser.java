@@ -6,6 +6,10 @@ public class Parser {
 
         Expression result = new Expression();
 
+        source = source.replaceAll("[^><+-.,\\[\\]]", "");
+
+
+
         return result;
     }
 }
